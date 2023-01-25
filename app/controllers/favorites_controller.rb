@@ -4,8 +4,8 @@ class FavoritesController < ApplicationController
   # GET
   def index
     if params[:user_id]
-      favorited_literature = User.find(params[:user_id]).favorited_literature
-      render json: favorited_literature
+      favorited_poems = User.find(params[:user_id]).favorited_poems
+      render json: favorited_poems
     else
       favorites = Favorite.all
       render json: favorites

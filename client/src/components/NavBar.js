@@ -29,6 +29,9 @@ const NavBar = ({ updateUser, currentUser }) => {
                 <Link to="/books">
                     <h1>Books</h1>
                 </Link>
+                <Link to="/login">
+                    Login
+                </Link>
             </div>
         </div>
         <div className='testing-end'>
@@ -38,7 +41,7 @@ const NavBar = ({ updateUser, currentUser }) => {
                         <a>Hello, {currentUser.username}</a>
                     </Link>
                     <div>
-                        <a onClick={handleLogOut}>Logout</a>
+                        <Link to="/" onClick={handleLogOut}>Logout</Link>
                     </div>
                 </div>
             )}

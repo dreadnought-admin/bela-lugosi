@@ -75,7 +75,7 @@ const App = () => {
 
           <Route
             exact
-            path = "/"
+            path = "/login"
             element={<Login updateUser={updateUser} />}
           />
 

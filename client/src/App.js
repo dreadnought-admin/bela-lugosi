@@ -5,7 +5,10 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
-
+import Footer from './components/Footer'
+import PoemList from './components/PoemList'
+import BookList from './components/BookList'
+import Profile from './components/Profile'
 
 
 const App = () => {
@@ -85,10 +88,29 @@ const App = () => {
             element={<Home />}
           />
 
+          <Route 
+          exact
+          path = "/poems"
+          element={<PoemList />}
+          />
+
+          <Route
+          exact
+          path = "/books"
+          element={<BookList />}
+          />
+
+          <Route
+          exact
+          path = "/profile"
+          element={<Profile />}
+          />
+
         </Routes>
 
       </Router>
       
+      <Footer />
     </div>
   );
 }

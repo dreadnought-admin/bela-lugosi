@@ -21,6 +21,9 @@ const NavBar = ({ updateUser, currentUser }) => {
     <div>
         <div>
             <div>
+                <Link to="/">
+                    Home
+                </Link>
                 <Link to="/poems">
                     <a href="">
                         <h1>Poems</h1>
@@ -36,7 +39,7 @@ const NavBar = ({ updateUser, currentUser }) => {
         </div>
         <div className='testing-end'>
             {currentUser && (
-                <div class='bar-item'>
+                <div className='bar-item'>
                     <Link to="/profile">
                         <a>Hello, {currentUser.username}</a>
                     </Link>

@@ -9,9 +9,6 @@ const Login = ({ updateUser }) => {
 
   const navigate = useNavigate();
 
-
-  // const history = useHistory()
-
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch("/login", {

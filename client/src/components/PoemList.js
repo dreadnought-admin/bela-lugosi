@@ -1,10 +1,24 @@
 import React from 'react'
+import PoemForm from './PoemForm'
+import PoemCard from './PoemCard'
 
-const PoemList = () => {
+const PoemList = ({ poems, handleDeletePoem, enterPoemEdit }) => {
+  
+  
+  
+  const poemList = poems.map((poem) => {
+    return <PoemCard 
+    key={poem.id} 
+    poem={poem} 
+    enterPoemEdit={enterPoemEdit}
+    handleDeletePoem={handleDeletePoem}/>
+  })
+
+
   return (
-    <div>
-      <p>This is the start of the poem list</p>
-    </div>
+    <ul className="poemList">
+      {poemList}
+    </ul>
   )
 }
 

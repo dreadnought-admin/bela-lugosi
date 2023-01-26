@@ -9,6 +9,13 @@ import Footer from './components/Footer'
 import PoemList from './components/PoemList'
 import BookList from './components/BookList'
 import Profile from './components/Profile'
+import BookDetail from './components/BookDetail'
+import BookEditForm from './components/BookEditForm'
+import PoemEditForm from './components/PoemEditForm'
+import BookForm from './components/BookForm'
+import PoemForm from './components/PoemForm'
+
+import Search from './components/Search'
 
 
 const App = () => {
@@ -16,6 +23,10 @@ const App = () => {
   const [books, setBooks] = useState([]);
   const [poems, setPoems] = useState([]);
   const [favorites, setFavorites] = useState([]);
+
+
+  const [bookId, setBookId] = useState(null);
+  const [poemId, setPoemId] = useState(null);
 
   useEffect(() => {
     fetch("/authorized_user").then((r) => { 
@@ -57,6 +68,81 @@ const App = () => {
     })
   }
 
+  // delete
+
+  const handleDeletePoem = (id) => {
+    const newPoemList = poems.filter((poem) =>
+    poem.id !== id )
+    setPoems(newPoemList)
+  }
+
+  const handleDeleteBook = (id) => {
+    fetch(`/books/${id}`,
+    {
+      method: "DELETE",
+    }
+  )
+    .then((r) => r.json())
+    .then(() => {
+      setBooks((books) => books.filter((book) => book.id !== id ))
+    });
+  }
+
+  // patch 
+
+  const onUpdatePoem = (updatedPoem) => {
+    const updatedPoems = poems.map((ogPoem) => {
+      if (ogPoem.id === updatedPoem.id) {
+        return updatedPoem;
+      } else {
+        return ogPoem;
+      }
+    });
+    setPoems(updatedPoems)
+  }
+
+  const onUpdateBook = (updatedBook) => {
+    const updatedBooks = books.map((ogBook) => {
+      if (ogBook.id === updatedBook.id) {
+        return updatedBook;
+      } else {
+        return ogBook;
+      }
+    });
+    setBooks(updatedBooks)
+  }
+
+  // complete editing
+
+  const completeEditPoem = () => {
+    setBookId(null);
+  }
+
+  const completeEditBook = () => {
+    setPoemId(null);
+  }
+
+  // re-route and enter editing mode
+
+  const enterBookEdit = (bookId) => {
+    setBookId(bookId)
+  }
+
+  const enterPoemEdit = (poemId) => {
+    setPoemId(poemId)
+  }
+
+  // search for books
+
+  const [search, setSearch] = useState("")
+
+  const searchQuery = books.filter(book => {
+    return(
+      book.title.toLowerCase().includes(search.toLowerCase())
+    )
+  })
+
+
   console.log(poems)
   console.log(books)
 
@@ -91,21 +177,82 @@ const App = () => {
           <Route 
           exact
           path = "/poems"
-          element={<PoemList />}
+          element=
+          {<PoemList
+            poems={poems}
+            enterPoemEdit={enterPoemEdit}
+            handleDeletePoem={handleDeletePoem} />}
           />
+
+          <Route
+          exact
+          path = "/poems/:id/edit"
+          element={<PoemEditForm 
+          poemId={poemId}
+          completeEditPoem={completeEditPoem}
+          onUpdatePoem={onUpdatePoem}/>}
+          />
+
+          <Route
+          exact
+          path = "/books/:id/edit"
+          element=
+          {<BookEditForm 
+            bookId={bookId}
+            completeEditBook={completeEditBook}
+            onUpdateBook={onUpdateBook}/>}
+          />
+
+          <Route 
+          exact
+          path = "/books/:id"
+          element=
+          {<BookDetail
+            currentUser={currentUser}
+            setFavorites={setFavorites}
+            favorites={favorites} />}
+          />
+
 
           <Route
           exact
           path = "/books"
-          element={<BookList />}
+          element=
+          {<>
+          <Search 
+          search={search}
+          setSearch={setSearch}/>
+
+          <BookList 
+          books={searchQuery}
+          enterBookEdit={enterBookEdit}
+          handleDeleteBook={handleDeleteBook}/></>
+          }
           />
 
+          {currentUser && (
           <Route
           exact
           path = "/profile"
-          element={<Profile />}
+          element=
+          {<Profile
+            currentUser={currentUser}
+            favorites={favorites} />}
           />
+          )}
 
+          {currentUser && (
+            <Route 
+            exact
+            path="/newbook"
+            element=
+              {<BookForm 
+                books={books}
+                setBooks={setBooks}
+                currentUser={currentUser}/>}
+            />
+          )}
+        
         </Routes>
 
       </Router>

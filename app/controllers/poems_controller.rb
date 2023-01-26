@@ -22,6 +22,7 @@ class PoemsController < ApplicationController
     end 
     
     def update
+        poem = (find_poem)
         if poem.update(poem_params)
             render json: poem
         else 

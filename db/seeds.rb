@@ -11,28 +11,27 @@ u4 = User.create(username: "Bela Lugosi", email: Faker::Internet.email, password
 puts "Seeding poems..."
 
 p1 = Poem.create(user_id: u1.id, title: "Alone", author: "Edgar Allan Poe", poem_type: "AABB", genre: "Gothic", year_published: 1829, poem_txt: "From childhood’s hour I have not been
-    As others were—I have not seen
-    As others saw—I could not bring
-    My passions from a common spring—
-    From the same source I have not taken
-    My sorrow—I could not awaken
-    My heart to joy at the same tone—
-    And all I lov’d—I lov’d alone—
-    Then—in my childhood—in the dawn
-    Of a most stormy life—was drawn
-    From ev’ry depth of good and ill
-    The mystery which binds me still—
-    From the torrent, or the fountain—
-    From the red cliff of the mountain—
-    From the sun that ’round me roll’d
-    In its autumn tint of gold—
-    From the lightning in the sky
-    As it pass’d me flying by—
-    From the thunder, and the storm—
-    And the cloud that took the form
-    (When the rest of Heaven was blue)
-    Of a demon in my view—
-    ")
+    As others were—I have not seen\n
+    As others saw—I could not bring\n
+    My passions from a common spring—\n
+    From the same source I have not taken\n
+    My sorrow—I could not awaken\n
+    My heart to joy at the same tone—\n
+    And all I lov’d—I lov’d alone—\n
+    Then—in my childhood—in the dawn\n
+    Of a most stormy life—was drawn\n
+    From ev’ry depth of good and ill\n
+    The mystery which binds me still—\n
+    From the torrent, or the fountain—\n
+    From the red cliff of the mountain—\n
+    From the sun that ’round me roll’d\n
+    In its autumn tint of gold—\n
+    From the lightning in the sky\n
+    As it pass’d me flying by—\n
+    From the thunder, and the storm—\n
+    And the cloud that took the form\n
+    (When the rest of Heaven was blue)\n
+    Of a demon in my view—\n")
 
 p2 = Poem.create(user_id: u2.id, title: "The Haunted Palace", author: "Edgar Allan Poe", poem_type: "ABABCDCD", genre: "Gothic", year_published: 1839, poem_txt: "In the greenest of our valleys
     By good angels tenanted,

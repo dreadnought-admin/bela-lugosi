@@ -16,7 +16,6 @@ const NavBar = ({ updateUser, currentUser }) => {
         });
     }
 
-
   return (
     <div>
         <div>

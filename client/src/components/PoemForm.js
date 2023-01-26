@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const PoemForm = () => {
+const PoemForm = ({ currentUser }) => {
+
+
   return (
     <div>
       

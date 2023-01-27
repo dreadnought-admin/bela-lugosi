@@ -244,6 +244,104 @@ p4 = Poem.create(user_id: u4.id, title: "Ariel", author: "Sylvia Plath", poem_ty
     Eye, the cauldron of morning."
     )
 
+p5 = Poem.create(user_id: u1.id, title: "Daddy", author: "Sylvia Plath", poem_type: "Free Verse", genre: "Gothic/Romantic", year_published: 1960, poem_txt: "
+    You do not do, you do not do   
+        Any more, black shoe
+        In which I have lived like a foot   
+        For thirty years, poor and white,   
+        Barely daring to breathe or Achoo.
+        
+        Daddy, I have had to kill you.   
+        You died before I had time——
+        Marble-heavy, a bag full of God,   
+        Ghastly statue with one gray toe   
+        Big as a Frisco seal
+        
+        And a head in the freakish Atlantic   
+        Where it pours bean green over blue   
+        In the waters off beautiful Nauset.   
+        I used to pray to recover you.
+        Ach, du.
+        
+        In the German tongue, in the Polish town   
+        Scraped flat by the roller
+        Of wars, wars, wars.
+        But the name of the town is common.   
+        My Polack friend
+        
+        Says there are a dozen or two.   
+        So I never could tell where you   
+        Put your foot, your root,
+        I never could talk to you.
+        The tongue stuck in my jaw.
+        
+        It stuck in a barb wire snare.   
+        Ich, ich, ich, ich,
+        I could hardly speak.
+        I thought every German was you.   
+        And the language obscene
+        
+        An engine, an engine
+        Chuffing me off like a Jew.
+        A Jew to Dachau, Auschwitz, Belsen.   
+        I began to talk like a Jew.
+        I think I may well be a Jew.
+        
+        The snows of the Tyrol, the clear beer of Vienna   
+        Are not very pure or true.
+        With my gipsy ancestress and my weird luck   
+        And my Taroc pack and my Taroc pack
+        I may be a bit of a Jew.
+        
+        I have always been scared of you,
+        With your Luftwaffe, your gobbledygoo.   
+        And your neat mustache
+        And your Aryan eye, bright blue.
+        Panzer-man, panzer-man, O You——
+        
+        Not God but a swastika
+        So black no sky could squeak through.   
+        Every woman adores a Fascist,   
+        The boot in the face, the brute   
+        Brute heart of a brute like you.
+        
+        You stand at the blackboard, daddy,   
+        In the picture I have of you,
+        A cleft in your chin instead of your foot   
+        But no less a devil for that, no not   
+        Any less the black man who
+        
+        Bit my pretty red heart in two.
+        I was ten when they buried you.   
+        At twenty I tried to die
+        And get back, back, back to you.
+        I thought even the bones would do.
+        
+        But they pulled me out of the sack,   
+        And they stuck me together with glue.   
+        And then I knew what to do.
+        I made a model of you,
+        A man in black with a Meinkampf look
+        
+        And a love of the rack and the screw.   
+        And I said I do, I do.
+        So daddy, I’m finally through.
+        The black telephone’s off at the root,   
+        The voices just can’t worm through.
+        
+        If I’ve killed one man, I’ve killed two——
+        The vampire who said he was you   
+        And drank my blood for a year,
+        Seven years, if you want to know.
+        Daddy, you can lie back now.
+        
+        There’s a stake in your fat black heart   
+        And the villagers never liked you.
+        They are dancing and stamping on you.   
+        They always knew it was you.
+        Daddy, daddy, you bastard, I’m through."
+    )
+
     puts "Seeding book..."
 
 b1 = Book.create!(user_id: u4.id, title: "Dracula", author: "Bram Stoker", year_published: 1897, genre: "Gothic", cover_img: "https://wendyvancamp.files.wordpress.com/2014/10/dracula-book-cover.jpg", 
@@ -308,6 +406,20 @@ b6 = Book.create!(user_id: u1.id, title: "The Fall of the House of Usher and Oth
     force about a family doomed by a grim bloodline curse; and his pioneering detective stories, “The Purloined Letter” and “The Murders
      in the Rue Morgue,” featuring a rational investigator with a poetic soul. Also included is Poe’s only full-length novel, Narrative of A. Gordon Pym."
 )
+
+b7 = Book.create!(user_id: u1.id, title: "Wuthering Heights", author: "Emily Brontë", year_published: 1847, genre: "Gothic Fiction", cover_img: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1602777549-41dAOQBWAUL.jpg?crop=1xw:0.981xh;center,top&resize=768:*",
+    summary: "Wuthering Heights is an 1847 novel by Emily Brontë, initially published under her pen name Ellis Bell. It concerns two families of the landed gentry living on the West Yorkshire moors, the Earnshaws and the Lintons, and their turbulent relationships with the Earnshaws' foster son, Heathcliff. The novel was influenced by Romanticism and Gothic fiction.
+
+    Wuthering Heights is now widely considered to be one of the greatest novels ever written in English, but contemporaneous reviews were polarised. It was controversial for its depictions of mental and physical cruelty, including domestic abuse, and for its challenges to Victorian morality and religious and societal values."
+)
+
+b8 = Book.create!(user_id: u2.id, title: "Frankenstein", author: "Mary Shelley", year_published: 1818, genre: "Gothic Fiction", cover_img: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1602623954-416QjTxduzL.jpg?crop=1xw:0.939xh;center,top&resize=768:*",
+    summary: "Frankenstein; or, The Modern Prometheus is an 1818 novel written by English author Mary Shelley. Frankenstein tells the story of Victor Frankenstein, a young scientist who creates a sapient creature in an unorthodox scientific experiment. Shelley started writing the story when she was 18, and the first edition was published anonymously in London on 1 January 1818, when she was 20. Her name first appeared in the second edition, which was published in Paris in 1821.
+
+    Shelley travelled through Europe in 1815, moving along the river Rhine in Germany, and stopping in Gernsheim, 17 kilometres (11 mi) away from Frankenstein Castle, where, two centuries before, an alchemist had engaged in experiments.She then journeyed to the region of Geneva, Switzerland, where much of the story takes place. Galvanism and occult ideas were topics of conversation for her companions, particularly for her lover and future husband Percy B. Shelley. In 1816 Mary, Percy and Lord Byron had a competition to see who could write the best horror story. After thinking for days, Shelley was inspired to write Frankenstein after imagining a scientist who created life and was horrified by what he had made."
+)
+
+
 
 puts "Seeding favorites..."
 

@@ -57,17 +57,17 @@ const PoemEditForm = ({ onUpdatePoem }) => {
   }
 
   return (
-    <div>
+    <div className="new_form">
       <form onSubmit={handleSubmit} autoComplete="off">
-        <h3>Edit Poem</h3>
-        <fieldset>
-          <legend>
-            What do you want to change?
+        <fieldset className="new_fieldset">
+          <legend className="new_legend">
+            Edit this Poem?
           </legend>
           <ul>
             <li>
-              <label htmlFor='title'>Title:</label>
+              <label className="new_form_header" htmlFor='title'>Title:</label>
               <input
+              className="input"
               type="text"
               id="title"
               name="title"
@@ -76,8 +76,9 @@ const PoemEditForm = ({ onUpdatePoem }) => {
               />
             </li>
             <li>
-              <label htmlFor='author'>Author:</label>
+              <label className="new_form_header" htmlFor='author'>Author:</label>
               <input
+              className="input"
               type="text"
               id="author"
               name="author"
@@ -86,8 +87,9 @@ const PoemEditForm = ({ onUpdatePoem }) => {
               />
             </li>
             <li>
-              <label htmlFor='genre'>Genre:</label>
+              <label className="new_form_header" htmlFor='genre'>Genre:</label>
               <input
+              className="input"
               type="text"
               id="genre"
               name="genre"
@@ -96,8 +98,9 @@ const PoemEditForm = ({ onUpdatePoem }) => {
               />
             </li>
             <li>
-              <label htmlFor='year_published'>Year Published:</label>
+              <label className="new_form_header" htmlFor='year_published'>Year Published:</label>
               <input
+              className="input"
               type="number"
               id="year_published"
               name="year_published"
@@ -107,8 +110,9 @@ const PoemEditForm = ({ onUpdatePoem }) => {
             </li>
             
             <li>
-              <label htmlFor='poem_type'>Type:</label>
+              <label className="new_form_header" htmlFor='poem_type'>Rhyme Scheme/Type:</label>
               <input
+              className="input"
               type="text"
               id="poem_type"
               name="poem_type"
@@ -117,9 +121,10 @@ const PoemEditForm = ({ onUpdatePoem }) => {
               />
             </li>
 
-            <label htmlFor='text'>Text:</label>
+            <label className="new_form_header" htmlFor='text'>Text:</label>
             <li>
               <textarea
+              className="edit_text_area"
               type="text"
               id="poem_txt"
               rows="50"
@@ -131,7 +136,7 @@ const PoemEditForm = ({ onUpdatePoem }) => {
             </li>
           </ul>
 
-          <button className="button" type="submit">Update</button>
+          <button className="button" type="submit">Update 🔗</button>
         </fieldset>
       </form>
     </div>

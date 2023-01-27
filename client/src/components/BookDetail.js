@@ -35,18 +35,24 @@ const BookDetail = ({ currentUser, favorites, setFavorites }) => {
   return (
     <div>
       <div>
-        <img height="100px" width="100px" src={cover_img}></img>
-        <h1>{title}</h1>
-        <h2>{author}</h2>
-        <h2>{genre} | {year_published} </h2>
-        <p>{summary}</p>
+        <div className="detail_img"> 
+        <img className="detail_img_actual" height="550em" width="450em" src={cover_img}></img>
+        </div>
+        <div className="details">
+          <h1 className="detail_title">{title}</h1>
+          <h2>{author} ✒️</h2>
+          <h2>{genre} | {year_published} </h2>
+          <p className="details_summary">{summary}</p>
+        </div>
       </div>
-      <Link to="/books">
-      <button className="button" type="button">Back to the Library</button>
-      </Link>
-      <Link to={`/books/${id}/edit`}>
-        Edit this book
-      </Link>
+      <div className="detail_links">
+        <Link to="/books">
+        <button className="button" type="button">Back to the Library 🕸</button>
+        </Link>
+        <Link className="detail_edit" to={`/books/${id}/edit`}>
+          Doth thou protest? Suggest an edit? ⚱️
+        </Link>
+      </div>
       {/* <button type="button" onClick={handleFavorite}>Favorite</button> */}
 
       

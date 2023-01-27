@@ -47,38 +47,54 @@ const Signup = ({ updateUser }) => {
 
   return (
     <div>
-        <h1>Hi, I'm your sign up page!</h1>
-        <div>
+        <div className="signup_container">
           <form onSubmit={onSubmit}>
-            <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
-            onChange={handleChange}
-            />
-            <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Email"
-            onChange={handleChange}
-            />
-            <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-            onChange={handleChange}
-            />
+            <ul>
+              <li>
+                <label className="form_header" htmlFor='password'>Username</label>
+                <input
+                className="input"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="What shall we call ye?"
+                onChange={handleChange}
+                />
+              </li>
+              <li>
+                <label className="form_header" htmlFor='password'>Email</label>
+                <input
+                className="input"
+                type="text"
+                name="email"
+                id="email"
+                placeholder="To what email shall we send letters?"
+                onChange={handleChange}
+                />
+              </li>
+              <li>
+                <label className="form_header" htmlFor='password'>Password</label>
+                <input
+                className="input"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter a Password, dark and cryptic..."
+                onChange={handleChange}
+                />
+              </li>
+            </ul>
 
-            <div>
+            <div className="signup_button">
               <button
                 className="button"
                 type="submit"
                 value="Submit">I beckon ye: sign up! 🩸</button>
             </div>
           </form>
+        </div>
+        <div className="create_user_img">
+          <img src="../images/skeleton_dance.png"></img>
         </div>
     </div>
   )

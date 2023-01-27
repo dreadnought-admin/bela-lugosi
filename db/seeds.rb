@@ -262,7 +262,18 @@ b2 = Book.create!(user_id: u1.id, title: "Strange Case of Dr. Jekyll and Mr. Hyd
     and is considered to be a defining book of the gothic horror genre. 
     The novella has also had a sizable impact on popular culture, with the phrase 
     'Jekyll and Hyde' being used in vernacular to refer to people with an outwardly good but 
-    sometimes shockingly evil nature."
+    sometimes shockingly evil nature.
+
+    The tale—told largely from the perspective of Mr. Gabriel John Utterson, a London lawyer 
+    and friend of Dr. Henry Jekyll—begins quietly, with an urbane conversation between Utterson 
+    and his friend Mr. Richard Enfield. 
+    The latter tells how, returning home in the early hours of the morning, 
+    he witnessed a “horrible” incident: a small girl, running across the street, was 
+    trampled by a man named Mr. Edward Hyde, who left her screaming on the ground. 
+    After being caught, Hyde, who has a face that inspires loathing, agreed to pay the
+     child’s family, and he retrieved from a dilapidated building a check from the account 
+     of a respected man. Enfield assumes that Hyde is blackmailing that man, whom Utterson 
+     knows to be his client Jekyll."
 )
 
 b3 = Book.create!(user_id: u3.id, title: "The Castle of Otranto", author: "Horace Walpol", year_published: 1764, genre: "Gothic", cover_img: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781625580023/the-castle-of-otranto-9781625580023_hr.jpg", 
@@ -274,6 +285,28 @@ b3 = Book.create!(user_id: u3.id, title: "The Castle of Otranto", author: "Horac
     They suspect that Manfred has arranged the marriage in the hope of avoiding an ancient prophecy that predicted his
     castle and his rulership of Otranto “should pass from the present family, whenever the real owner should be grown 
     too large to inhabit it.”"
+)
+
+b4 = Book.create!(user_id: u2.id, title: "Northanger Abbey", author: "Jane Austen", year_published: 1817, genre: "Gothic", cover_img: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1602624378-412KU2svW7L.jpg?crop=1xw:0.999xh;center,top&resize=768:*", 
+    summary: "On the surface, Northanger Abbey appears to be a Gothic novel—but it's actually an affectionate and deliberate parody of the novels that were extremely popular at the time of publication. 
+    Catherine, Northanger Abbey's protagonist, can't get enough of books like Ann Radcliffe's 
+    The Mysteries of Udolpho. Austen, ever attuned to social comedy, is also parodying the reader."
+)
+
+b5 = Book.create!(user_id: u4.id, title: "The Turn of the Screw", author: "Henry James", year_published: 1898, genre: "Gothic", cover_img: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1602775316-61cSMNVpkUL.jpg?crop=1xw:0.999xh;center,top&resize=768:*", 
+    summary: "Henry James's classic work of psychological horror has inspired many adaptations, including, most recently, Netflix's The Haunting of Bly Manor. The novella follows a governess who accepts a position in a crumbling old house, where she hears ghosts. Reading 
+    The Turn of the Screw is a deliberately destabilizing experience—you never quite know who is 
+    telling the truth, because the characters don't, either."
+)
+
+b6 = Book.create!(user_id: u1.id, title: "The Fall of the House of Usher and Other Tales", author: "Edgar Allan Poe", year_published: 1960, genre: "Gothic Fiction", cover_img: "https://m.media-amazon.com/images/I/51xkACIBfRL._AC_SY780_.jpg",
+    summary: "Classic tales of mystery, terror, imagination, and suspense from the celebrated master of the macabre.
+
+    This volume gathers together fourteen of Edgar Allan Poe's richest and most influential tales, including: 
+    “The Pit and the Pendulum,” his reimagining of Inquisition tortures; “The Tell-Tale Heart,” an exploration of a murderer’s 
+    madness, which Stephen King called “the best tale of inside evil ever written”; “The Fall of the House of Usher,” Poe’s tour de 
+    force about a family doomed by a grim bloodline curse; and his pioneering detective stories, “The Purloined Letter” and “The Murders
+     in the Rue Morgue,” featuring a rational investigator with a poetic soul. Also included is Poe’s only full-length novel, Narrative of A. Gordon Pym."
 )
 
 puts "Seeding favorites..."

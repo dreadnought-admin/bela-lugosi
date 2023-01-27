@@ -28,37 +28,43 @@ const Login = ({ updateUser }) => {
 
   return (
     <div>
-      <div>
+      <div className="signup_img">
+        <img className="signup_img_actual" src="../images/transparent_skull.png"></img>
+      </div>
+      <div className="login_form">
         <form onSubmit={handleSubmit}>
-          <h1>Login</h1>
-          <label htmlFor='username'>username</label>
+          <h1>Have Ye Crossed the River Styx Prior?</h1>
+          <label className="form_header" htmlFor='username'>Username</label>
           <input
+          className="input"
           type="text"
           id="username"
           name="username"
           autoComplete='off'
-          placeholder="username"
+          placeholder="Enter your username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           />
-          <label htmlFor='password'>Password</label>
+          <label className="form_header" htmlFor='password'>Password</label>
           <input
+          className="input"
           type="pasword"
           id="pasword"
           autoComplete="current-password"
           value={password}
+          placeholder="Enter your password"
           onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button className="button" type="submit">Submit</button>
+          <button className="button" type="submit">Take me to my lair!</button>
 
         </form>
       </div>
-      <h1>OR</h1>
-      <div>
-        <Link to="/signup">Create An Account</Link>
+      
+      <div className="signup">
+        <Link className="create_link" to="/signup">☠️ Become Immortal: Create an Account ☠️</Link>
       </div>
-      <h1>Hi, I'm your Login page</h1>
+      
     </div>
   )
 }

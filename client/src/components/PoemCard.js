@@ -29,9 +29,9 @@ const PoemCard = ({ currentUser, poem, handleDeletePoem, enterPoemEdit, favorite
         <p>{poem_txt}</p>
       </div>
       <div>
-        <button className="button" type="button" id={id} onClick={handleDelete}>Delete</button>
+        <button className="button" type="button" id={id} onClick={handleDelete}>Banish 🔪</button>
         <Link to={`${id}/edit`}>
-          <button className="button" type="button" onClick={handleEditClick}>Edit</button>
+          <button className="button" type="button" onClick={handleEditClick}>Edit ✟</button>
         </Link>
       </div>
     </div>

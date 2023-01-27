@@ -16,12 +16,15 @@ font-family: 'UnifrakturMaguntia', cursive; */
   --bright-red: #DC143C;
   --dark-purple: #301934;
   --bone-white: #F9F6EE;
+  --yellow: #fdec6e;
+  --bright-purple: #BF40BF;
 
 }
 
 body {
   margin: 0;
   background-color: var(--true-black);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -56,6 +59,25 @@ p {
 
 
 
+a {
+  color:#fff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  color: #fdec6e;
+  text-shadow:0px 0px 30px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+
+
 .nav{
   list-style:none;
   margin:0;
@@ -81,10 +103,25 @@ p {
 
 .sourceContainer {
   padding-bottom: 25px;
+  color: var(--dark-purple);
+  text-shadow: .25px .25px var(--bone-white)
 }
 
 .poem-img {
   float: right;
+  opacity: 25%;
+}
+
+.poem_img_cont {
+  margin-right: 10em;
+  
+}
+
+.poemList {
+  width: 15em;
+  margin-top: 5em;
+  margin-bottom: 2.5em;
+  margin-left: 2.5em; 
 }
 
 .newBook {
@@ -126,12 +163,34 @@ p {
   }
 }
 
+.new_book_button {
+  background: transparent;
+  border: none;
+  font-family: 'Creepster', cursive;
+  font-size: 1.25em;
+  margin-top: 10px;
+  margin-left: 10em;
+  margin-bottom: 5em;
+  color: var(--bone-white)
+}
+
 .button {
   background: transparent;
   border: none;
   font-family: 'Creepster', cursive;
+  font-size: 1.25em;
   margin-top: 10px;
   color: var(--bone-white)
+}
+
+.button:hover {
+  color: var(--bright-red);
+  text-shadow:0px 0px 30px var(--bone-white);
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+
 }
 
 .detailsLink {
@@ -140,5 +199,239 @@ p {
   font-family: 'Bokor', cursive;
   font-size: 1.5em;
   color: var(--bone-white);
+}
+
+.detail_img {
+  text-align: center;
+}
+
+.detail_img_actual {
+  border: 1px 2px;
+  border-style: inset;
+  border-radius: 5px;
+  border-color: var(--bone-white)
+}
+
+.detail_edit {
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Creepster', cursive;
+  font-size: 1em;
+  color: var(--bone-white);
+  margin-left: 1em;
+}
+
+.detail_links {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  margin-left: 1em;
+}
+
+.book_form_list {
+  list-style: none;
+  text-align: left;
+}
+
+.form_header {
+  margin-right: 1.5em; 
+  font-family:'Bokor', cursive;
+  color: var(--yellow);
+  margin-left: 1em;
+}
+
+.new_form_header {
+  margin-right: 1.5em; 
+  font-family:'Bokor', cursive;
+  color: var(--yellow);
+  margin-left: 0em;
+}
+
+.new_book_button {
+  float: right;
+}
+
+.new_button {
+    background: transparent;
+    border: none;
+    font-family: 'Creepster', cursive;
+    font-size: 1.25em;
+    margin-top: 10px;
+    color: var(--bone-white);
+    margin-left: 5em;
+    text-decoration: none;
+  }
+  
+  .new_button:hover {
+    color: var(--bright-red);
+    text-shadow:0px 0px 30px var(--bone-white);
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+
+  .new_book_button_container {
+    margin-bottom: 2.5em;
+    margin-top: 2.5em;
+  }
+
+  .edit_text_area {
+  background-color: var(--true-black);
+  border: none;
+  color: var(--bone-white);
+  font-family: 'Hina Mincho', cursive; 
+  font-size: 1.25em;
+  margin-left: 3em;
+  margin-bottom: 2em;
+  margin-right: 2em;
+  max-width: 15em;
+  max-height: 15em;
+}
+
+.new_form_container {
+  float: left;
+}
+
+.input {
+  font-family: 'Hina Mincho', cursive;
+  font-size: 1em;
+  border: none;
+  border-radius: .5em;
+  width: 15em; 
+  height: 2em;
+  margin-bottom: 2em; 
+}
+
+.details {
+  text-align: center;
+}
+
+.details_summary {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15em
+}
+
+.create_link {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 1.5em; 
+  text-decoration: none;
+  color: var(--bright-red);
+  text-shadow:0px 0px 30px var(--bone-white);
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+
+}
+
+.login_form {
+  float: left;
+  width: 15em; 
+  margin-left: 5em; 
+  margin-top: 10em; 
+  margin-bottom: 10em; 
+}
+
+.signup {
+  float: right;
+  margin-right: 5em; 
+  margin-top: 15em; 
+}
+
+.signup_img {
+  text-align: center; 
+}
+
+.signup_img_actual {
+  height: 40em;
+  width: 25em;
+}
+
+.create_user_img {
+  float: right; 
+  margin-left: 10em;
+  display: flex; 
+}
+
+.userContainer {
+  margin-left: 2.5em;
+}
+
+.signup_container {
+  float: left;
+  margin-top: 5em; 
+  margin-left: 2.5em;
+  width: 15em; 
+}
+
+.signup_button {
+  text-align: center;
+  margin-left: 2.5em;
+}
+
+.searchbox {
+  float: right; 
+  margin-right: 2.5em; 
+}
+
+.book_list {
+  margin-top: 5em; 
+}
+
+.logout {
+  font-family: 'Passions Conflict', cursive;
+  font-size: 2em;
+  text-align: center; 
+  margin-right: .5em;
+}
+
+.home {
+  margin-left: 2.5em; 
+  float: left;
+}
+
+.home_img {
+  float: right; 
+}
+
+.home_header {
+  text-shadow: .5px .5px var(--bone-white);
+  font-family: 'Bokor', cursive;
+}
+
+.home_sub {
+  text-shadow: .5px .5px var(--bone-white);
+}
+
+.new_form_container {
+  margin-top: 5em; 
+}
+
+
+.new_fieldset {
+  margin-left: 3em;
+}
+
+.new_legend {
+  font-family: 'UnifrakturMaguntia', cursive;  
+  font-size: 2em;
+  color: var(--bone-white);
+  text-shadow: 1px 1px var(--bright-red);
+}
+
+.new_book_form {
+}
+
+
+.new_book_img {
+  float: right;
+  margin-left: 10em;  
+  width: 10em; 
+}
+
+.new_form {
+  float: left; 
+  margin-bottom: 5em;
 }
 

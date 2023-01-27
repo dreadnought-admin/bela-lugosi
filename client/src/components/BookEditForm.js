@@ -56,17 +56,18 @@ const [formData, setFormData] = useState(initialState)
   }
   
     return (
-      <div>
+      <div className="form_container">
         <form onSubmit={handleSubmit} autoComplete="off">
           <h3>Edit book</h3>
           <fieldset>
-            <legend>
+            <legend className="legend-text">
               What do you want to change?
             </legend>
-            <ul>
+            <ul className="book_form_list">
               <li>
-                <label htmlFor='title'>Title:</label>
+                <label className="form_header" htmlFor='title'>Title:</label>
                 <input
+                className="input"
                 type="text"
                 id="title"
                 name="title"
@@ -75,8 +76,9 @@ const [formData, setFormData] = useState(initialState)
                 />
               </li>
               <li>
-                <label htmlFor='author'>Author:</label>
+                <label className="form_header" htmlFor='author'>Author:</label>
                 <input
+                className="input"
                 type="text"
                 id="author"
                 name="author"
@@ -85,8 +87,9 @@ const [formData, setFormData] = useState(initialState)
                 />
               </li>
               <li>
-                <label htmlFor='genre'>Genre:</label>
+                <label className="form_header" htmlFor='genre'>Genre:</label>
                 <input
+                className="input"
                 type="text"
                 id="genre"
                 name="genre"
@@ -95,8 +98,9 @@ const [formData, setFormData] = useState(initialState)
                 />
               </li>
               <li>
-                <label htmlFor='year_published'>Year Published:</label>
+                <label className="form_header" htmlFor='year_published'>Year Published:</label>
                 <input
+                className="input"
                 type="number"
                 id="year_published"
                 name="year_published"
@@ -104,11 +108,12 @@ const [formData, setFormData] = useState(initialState)
                 onChange={handleChange}
                 />
               </li>
-              
+
+              <label className="form_header" htmlFor='summary'>Summary:</label>
               <li>
-                <label htmlFor='summary'>Summary:</label>
                 <textarea
-                rows="50"
+                className="edit_text_area"
+                rows="25"
                 cols="100"
                 type="text"
                 id="summary"
@@ -118,7 +123,7 @@ const [formData, setFormData] = useState(initialState)
               </li>
 
               <li>
-                <label htmlFor='cover_img'>Cover</label>
+                <label className="form_header" htmlFor='cover_img'>Cover Image URL</label>
                 <input
                 type="text"
                 id="cover_img"
@@ -128,9 +133,7 @@ const [formData, setFormData] = useState(initialState)
                 />
               </li>
   
-              
             </ul>
-  
             <button className="button" type="submit">Update</button>
           </fieldset>
         </form>

@@ -49,61 +49,82 @@ const handleChange = (e) => {
   
 
   return (
-    <div>
-      <form autoComplete="off" onSubmit={handleSubmit}>
-        <ul>
+    <div className="new_form_container">
+      <div className="new_form">
+      <fieldset className="new_fieldset">
+        <legend className="new_legend">
+          Summon a new tome...
+        </legend>
+      <form className="new_book_form" autoComplete="off" onSubmit={handleSubmit}>
+        <ul className="book_form_list">
           <li>
+            <label className="new_form_header" htmlFor='title'>Title</label>
             <input
+            className="input"
             type="text"
             name="title"
             id="title"
-            placeholder="title"
+            placeholder="Enter a title"
             value={formData.title}
             onChange={handleChange}
             />
           </li>
           <li>
+            <label className="new_form_header" htmlFor='author'>Author</label>
             <input
+            className="input"
             type="text"
             name="author"
             id="author"
-            placeholder="author"
+            placeholder="Enter an author"
             value={formData.author}
             onChange={handleChange}
             />
           </li>
+
           <li>
+            <label className="new_form_header" htmlFor='genre'>Genre</label>
             <input
+            className="input"
             type="text"
             name="genre"
             id="genre"
-            placeholder="genre"
+            placeholder="Enter a genre"
             value={formData.genre}
             onChange={handleChange}
             />
           </li>
+
           <li>
+            <label className="new_form_header" htmlFor='year_published'>Publishing Year</label>
             <input
+            className="input"
             type="number"
             name="year_published"
             id="year_published"
-            placeholder="pub"
+            placeholder="Year Published?"
             value={formData.year_published}
             onChange={handleChange}
             />
           </li>
+
+            <label className="form_header" htmlFor='summary'>Summary</label>
           <li>
-            <input
+            <textarea
+            className="edit_text_area"
             type="text"
             name="summary"
             id="summary"
-            placeholder="summary"
+            placeholder="Pray tell, what is this book about?"
             value={formData.summary}
             onChange={handleChange}
             />
           </li>
+
           <li>
+            <label className="new_form_header" htmlFor='cover_img'>Cover Image URL</label>
             <input
+            className="input"
             type="text"
             name="cover_img"
             id="cover_img"
@@ -113,10 +134,19 @@ const handleChange = (e) => {
             />
           </li>
         </ul>
-        <button className="button" type="submit" onClick={handleSubmit}>Submit</button>
+
+        <div className="new_book_button">
+          <button className="button" type="submit" onClick={handleSubmit}>⛧ Submit ⛧</button>
+        </div>     
       </form>
-      
-    </div>
+      </fieldset>
+
+      </div>
+      <div className="new_book_img">
+        <img className="new_book_img_actual" src="../images/death.png"></img>
+  </div>
+</div>
+  
   )
 }
 

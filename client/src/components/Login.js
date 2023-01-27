@@ -50,7 +50,7 @@ const Login = ({ updateUser }) => {
           onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button type="submit">Submit</button>
+          <button className="button" type="submit">Submit</button>
 
         </form>
       </div>

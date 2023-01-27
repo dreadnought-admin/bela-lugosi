@@ -24,38 +24,38 @@ const NavBar = ({ updateUser, currentUser }) => {
                     <div className="logoContainer">
                         <li><Link to="/">
                         <img className="siteLogo" height="200px" width="200px" src="../images/circulargigas.png"></img>
-                        <p className="home_txt">Home</p>
+                        <h1 className="home_txt">Home</h1>
                         </Link>
                         </li>
                     </div>
                     <li>
                     <NavLink to="/poems">
-                        <p>Poems</p>
+                        <h1>Poems 📜</h1>
                     </NavLink>
                     </li>
 
                     <li>
                     <NavLink to="/books">
-                        <p>Books</p>
+                        <h1>Books 📕</h1>
                     </NavLink>
                     </li>
 
                     <li>
                     <NavLink to="/login">
-                        <p>Login</p>
+                        <h1>Login 🧛🏻</h1>
                     </NavLink>
                     </li>
                     
                     <li>
                     <NavLink to ="/about">
-                        <p>What is Gothic Literature?</p>
+                        <h1>What is Gothic Literature? 🕯️</h1>
                     </NavLink>
                     </li>
 
                 {currentUser && (
                     <div>
                         <NavLink to="/profile">
-                            <a>The Darkness Embraces You, {currentUser.username}</a>
+                            <h2>The Darkness Embraces You, {currentUser.username} ⚰️</h2>
                         </NavLink>
 
                         <div>

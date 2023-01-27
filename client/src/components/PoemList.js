@@ -19,9 +19,12 @@ const PoemList = ({ currentUser, poems, handleDeletePoem, enterPoemEdit, favorit
 
 
   return (
+    <div>
+    <img width="250px" height="250px" className="poem-img" src="../images/eap.png"></img>
     <ul className="poemList">
-      {poemList}
+    🥀 {poemList}
     </ul>
+    </div>
   )
 }
 

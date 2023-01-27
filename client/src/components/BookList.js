@@ -14,12 +14,12 @@ const BookList = ({ books, handleDeleteBook, enterBookEdit }) => {
   
   return (
     <div>
-      <ul>
+      <ul className="cards">
         {bookList}
       </ul>
       <div>
-        <Link to="/newbook">
-          Add a new book!
+        <Link className="newBook" to="/newbook">
+          Summon a new book!
         </Link>
       </div>
     </div>

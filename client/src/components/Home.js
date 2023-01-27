@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="home">
       <h1>How much misery can one mortal bear? Nay, can one tome hold? Both are damned to their own souls...</h1>
-      <h2>Welcome, darkling, to 'Bela Lugosi's Well-Read'</h2>
+      <h2>Welcome, darkling, to <em>Bela Lugosi's Well-Read</em></h2>
 
       <div>
         <p>Here you will find an ever-evolving collection of Gothic literature, the centrefold of the dark romantic movement.</p>

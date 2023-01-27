@@ -131,7 +131,7 @@ const PoemEditForm = ({ onUpdatePoem }) => {
             </li>
           </ul>
 
-          <button type="submit">Update</button>
+          <button className="button" type="submit">Update</button>
         </fieldset>
       </form>
     </div>

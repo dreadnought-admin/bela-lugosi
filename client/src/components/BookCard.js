@@ -17,19 +17,19 @@ const BookCard = ({ book, handleDeleteBook, enterBookEdit }) => {
   }
   
   return (
-    <div>
-      <img width="50px" height="50px" src={cover_img}></img>
+    <li className="card">
+      <img width="150x" height="200px" src={cover_img}></img>
       <div>
-        <h2>{title} {author}</h2>
-        <h3>{genre} | {year_published}</h3>
+        <h2>{title} by {author}</h2>
+        <h3>🕯️ {genre} | {year_published} 🕯️</h3>
         
       </div>
-      <Link to={`/books/${id}`}>Details</Link>
+      <Link className="detailsLink" to={`/books/${id}`}>See details...</Link>
       <div>
-        <button type="button" id={id} onClick={handleDelete}>Delete</button>
+        <button className="button" type="button" id={id} onClick={handleDelete}>To the grave... 🪦 </button>
       </div>
       
-    </div>
+    </li>
   )
 }
 

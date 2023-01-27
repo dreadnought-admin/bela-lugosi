@@ -1,21 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Bokor&family=Creepster&family=Hina+Mincho&family=Passions+Conflict&family=UnifrakturCook&family=UnifrakturMaguntia&display=swap');
 
 
-/* .navigation {
-  display: inline;
-  width: 100%;
-  padding-bottom: 50px;
+/* font-family: 'Bokor', cursive;
+font-family: 'Creepster', cursive;
+font-family: 'Hina Mincho', serif;
+font-family: 'Passions Conflict', cursive;
+font-family: 'UnifrakturCook', cursive;
+font-family: 'UnifrakturMaguntia', cursive; */
+
+:root {
+  --true-black: #000000;
+  --black: #171219;
+  --dark-red: #6A170C;
+  --black-red: #150502;
+  --bright-red: #DC143C;
+  --dark-purple: #301934;
+  --bone-white: #F9F6EE;
+
 }
 
-.logoContainer {
-  float: right;
-  margin-right: 10px;
+body {
+  margin: 0;
+  background-color: var(--true-black);
 }
 
-.home_txt {
-  float: right;
-  margin-right: 60px;
-} */
+h1 {
+  font-family: UnifrakturMaguntia, cursive;
+  color: var(--bright-red);
+}
+
+h2 {
+  font-family: 'Hina Mincho', serif;
+  color: var(--bright-red)
+}
+
+h3 {
+  font-family: 'Bokor', cursive;
+  color: var(--bone-white);
+}
+
+h4 {
+  font-family: 'Bokor', cursive;
+  color: var(--bone-white);
+}
+
+p {
+  font-family: 'Hina Mincho', serif;
+  color: var(--bone-white);
+}
+
+.siteLogo:hover {
+  color: var(--black-red);
+  text-shadow: 2px 2px 5px var(--dark-red);
+}
+
+
 
 .nav{
   list-style:none;
@@ -43,3 +82,63 @@
 .sourceContainer {
   padding-bottom: 25px;
 }
+
+.poem-img {
+  float: right;
+}
+
+.newBook {
+  text-decoration: none;
+}
+
+.card {
+  width: calc(33% - 2rem);
+}
+
+.cards {
+  list-style: none;
+}
+
+.card {
+  margin: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: calc(33% - 2rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: calc(25% - 2rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: calc(20% - 2rem);
+  }
+}
+
+.button {
+  background: transparent;
+  border: none;
+  font-family: 'Creepster', cursive;
+  margin-top: 10px;
+  color: var(--bone-white)
+}
+
+.detailsLink {
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Bokor', cursive;
+  font-size: 1.5em;
+  color: var(--bone-white);
+}
+

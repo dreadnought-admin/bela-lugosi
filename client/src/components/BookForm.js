@@ -113,7 +113,7 @@ const handleChange = (e) => {
             />
           </li>
         </ul>
-        <button type="submit" onClick={handleSubmit}>Submit</button>
+        <button className="button" type="submit" onClick={handleSubmit}>Submit</button>
       </form>
       
     </div>

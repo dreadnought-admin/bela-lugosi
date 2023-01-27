@@ -42,7 +42,7 @@ const BookDetail = ({ currentUser, favorites, setFavorites }) => {
         <p>{summary}</p>
       </div>
       <Link to="/books">
-      <button type="button">Back to the Library</button>
+      <button className="button" type="button">Back to the Library</button>
       </Link>
       <Link to={`/books/${id}/edit`}>
         Edit this book

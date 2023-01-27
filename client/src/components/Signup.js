@@ -74,8 +74,9 @@ const Signup = ({ updateUser }) => {
 
             <div>
               <button
+                className="button"
                 type="submit"
-                value="Submit">Sign Up</button>
+                value="Submit">I beckon ye: sign up! 🩸</button>
             </div>
           </form>
         </div>

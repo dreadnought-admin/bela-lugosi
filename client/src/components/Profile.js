@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import BookList from './BookList';
-import PoemList from './PoemList'
 
 const Profile = ({ currentUser, favorites }) => {
   const [submissions, setSubmissions] = useState([])
@@ -15,11 +14,11 @@ const Profile = ({ currentUser, favorites }) => {
   return (
     <div>
       {" "}
-      <div>
-        <h1>{currentUser.username}'s submissions</h1>
-        <h3>submissions</h3>
-        <div>
-        <BookList books={submissions}/>
+      <div className="userContainer">
+        <h1>🦇 {currentUser.username}'s Submissions</h1>
+        <h3>Thou hath summoned...</h3>
+        <div className="submissions">
+          <BookList books={submissions}/>
         </div>
         <div>
          {/* <BookList books={favorites}/> */}

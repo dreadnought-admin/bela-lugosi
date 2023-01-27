@@ -23,15 +23,15 @@ const PoemCard = ({ currentUser, poem, handleDeletePoem, enterPoemEdit, favorite
   return (
     <div>
       <div>
-        <h2>{title} {author}</h2>
+        <h2><em>{title}</em> by {author}</h2>
         <h3>{genre} | Rhyme Scheme: {poem_type}</h3>
         <h4>{year_published}</h4>
         <p>{poem_txt}</p>
       </div>
       <div>
-        <button type="button" id={id} onClick={handleDelete}>Delete</button>
+        <button className="button" type="button" id={id} onClick={handleDelete}>Delete</button>
         <Link to={`${id}/edit`}>
-          <button type="button" onClick={handleEditClick}>Edit</button>
+          <button className="button" type="button" onClick={handleEditClick}>Edit</button>
         </Link>
       </div>
     </div>

@@ -27,9 +27,6 @@ const BookCard = ({ book, handleDeleteBook, enterBookEdit }) => {
       <Link to={`/books/${id}`}>Details</Link>
       <div>
         <button type="button" id={id} onClick={handleDelete}>Delete</button>
-        <Link to={`${id}/edit`}>
-          <button type="button" id={id} onClick={handleEditClick}>Edit</button>
-        </Link>
       </div>
       
     </div>

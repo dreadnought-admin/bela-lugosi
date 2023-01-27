@@ -278,14 +278,20 @@ b3 = Book.create!(user_id: u3.id, title: "The Castle of Otranto", author: "Horac
 
 puts "Seeding favorites..."
 
-Favorite.create!([
-    { user_id: u1.id, poem_id: p2.id }, 
-    { user_id: u4.id, poem_id: p3.id }, 
-    { user_id: u3.id, poem_id: p4.id },
-    { user_id: u2.id, poem_id: p4.id },
-    { user_id: u3.id, poem_id: p1.id },
-    { user_id: u1.id, poem_id: p3.id } ]
-)
+# Favorite.create!([
+#     { user_id: u1.id, book_id: b2.id }, 
+#     { user_id: u4.id, book_id: b1.id }, 
+#     { user_id: u3.id, book_id: b2.id },
+#     { user_id: u2.id, book_id: b3.id },
+#     { user_id: u3.id, book_id: b1.id },
+#     { user_id: u1.id, book_id: b3.id } ]
+# )
+
+f1 = Favorite.create!(user_id: u1.id, book_id: b2.id)
+f2 = Favorite.create!(user_id: u2.id, book_id: b1.id)
+f3 = Favorite.create!(user_id: u4.id, book_id: b3.id)
+f4 = Favorite.create!(user_id: u3.id, book_id: b1.id)
+
 
 puts 'Seeding favorite poems...'
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 
-const BookDetail = () => {
+const BookDetail = ({ currentUser, favorites, setFavorites }) => {
   const [book, setBook] = useState("")
   const { id } = useParams()
 
@@ -15,6 +15,23 @@ const BookDetail = () => {
 
   const { title, author, genre, year_published, summary, cover_img } = book
 
+  // const handleFavorite = () => {
+  //   const favoriteBook = { user_id: currentUser.id, book_id: id};
+  //   fetch("/favorites", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     body: JSON.stringify(favoriteBook),
+  //   })
+  //   .then((r) => r.json())
+  //   .then((data) => {
+  //     setFavorites({... favorites, data})
+  //   })
+  // }
+
+
+  
   return (
     <div>
       <div>
@@ -30,6 +47,8 @@ const BookDetail = () => {
       <Link to={`/books/${id}/edit`}>
         Edit this book
       </Link>
+      {/* <button type="button" onClick={handleFavorite}>Favorite</button> */}
+
       
     </div>
   )

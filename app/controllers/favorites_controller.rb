@@ -4,8 +4,8 @@ class FavoritesController < ApplicationController
   # GET
   def index
     if params[:user_id]
-      favorited_poems = User.find(params[:user_id]).favorited_poems
-      render json: favorited_poems
+      favorited_books = User.find(params[:user_id]).favorited_books
+      render json: favorited_books
     else
       favorites = Favorite.all
       render json: favorites
@@ -23,8 +23,8 @@ class FavoritesController < ApplicationController
     favorite = Favorite.new(favorite_params)
 
     if favorite.save
-      poem = favorite.poem
-      render json: poem, status: :created
+      book = favorite.book
+      render json: book, status: :created
     else
       render json: favorite.errors, status: :unprocessable_entity
     end
@@ -53,7 +53,7 @@ class FavoritesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def favorite_params
-      params.require(:favorite).permit(:user_id, :poem_id)
+      params.require(:favorite).permit(:user_id, :book_id)
     end
 
 end

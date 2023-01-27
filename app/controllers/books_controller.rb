@@ -10,6 +10,12 @@ class BooksController < ApplicationController
         render json: find_book, serializer: BookWithUsersSerializer
     end 
 
+    def user_books
+        user = User.find(params[:id])
+        books = Book.where("user_id = ?", params[:id])
+        render json: books
+    end 
+
     def create
         book = Book.create!(book_params)
         render json: book, status: :created

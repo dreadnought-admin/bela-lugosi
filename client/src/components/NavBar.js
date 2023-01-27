@@ -19,7 +19,7 @@ const NavBar = ({ updateUser, currentUser }) => {
   return (
     <div>
         <div>
-            <div>
+            
                 <Link to="/">
                     Home
                 </Link>
@@ -34,9 +34,10 @@ const NavBar = ({ updateUser, currentUser }) => {
                 <Link to="/login">
                     Login
                 </Link>
-            </div>
-        </div>
-        <div className='testing-end'>
+                <Link to ="/about">
+                    What is Gothic Literature?
+                </Link>
+
             {currentUser && (
                 <div className='bar-item'>
                     <Link to="/profile">

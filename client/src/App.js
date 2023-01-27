@@ -13,7 +13,7 @@ import BookDetail from './components/BookDetail'
 import BookEditForm from './components/BookEditForm'
 import PoemEditForm from './components/PoemEditForm'
 import BookForm from './components/BookForm'
-import PoemForm from './components/PoemForm'
+import GothicLit from './components/GothicLit'
 
 import Search from './components/Search'
 
@@ -46,11 +46,11 @@ const App = () => {
     fetchBooks();
   }, []);
 
-  useEffect(() => {
-    fetch(`/users/${currentUser.id}/favorites`)
-    .then((r) => r.json())
-    .then((favorites) => setFavorites(favorites));
-  }, [currentUser]);
+  // useEffect(() => {
+  //   fetch(`/users/${currentUser.id}/favorites`)
+  //   .then((r) => r.json())
+  //   .then((favorites) => setFavorites(favorites));
+  // }, [currentUser]);
 
   const fetchPoems = () => {
     fetch("/poems")
@@ -143,9 +143,6 @@ const App = () => {
   })
 
 
-  console.log(poems)
-  console.log(books)
-
   const updateUser = (user) => setCurrentUser(user);
 
 
@@ -174,12 +171,21 @@ const App = () => {
             element={<Home />}
           />
 
+          <Route
+          exact 
+          path = "/about"
+          element={<GothicLit />}
+          />
+
           <Route 
           exact
           path = "/poems"
           element=
           {<PoemList
             poems={poems}
+            currentUser={currentUser}
+            favorites={favorites}
+            setFavorites={setFavorites}
             enterPoemEdit={enterPoemEdit}
             handleDeletePoem={handleDeletePoem} />}
           />

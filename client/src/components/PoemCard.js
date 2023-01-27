@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const PoemCard = ({ poem, handleDeletePoem, enterPoemEdit }) => {
+const PoemCard = ({ currentUser, poem, handleDeletePoem, enterPoemEdit, favorites, setFavorites }) => {
 
   const { id, title, author, genre, poem_txt, 
     poem_type, year_published } = poem 
@@ -16,6 +16,9 @@ const PoemCard = ({ poem, handleDeletePoem, enterPoemEdit }) => {
     const handleEditClick = () => {
       enterPoemEdit(id);
     }
+
+    
+  
 
   return (
     <div>

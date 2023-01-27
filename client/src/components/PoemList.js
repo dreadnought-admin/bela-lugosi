@@ -2,14 +2,17 @@ import React from 'react'
 import PoemForm from './PoemForm'
 import PoemCard from './PoemCard'
 
-const PoemList = ({ poems, handleDeletePoem, enterPoemEdit }) => {
+const PoemList = ({ currentUser, poems, handleDeletePoem, enterPoemEdit, favorites, setFavorites }) => {
   
   
   
-  const poemList = poems.map((poem) => {
+  const poemList = poems?.map((poem) => {
     return <PoemCard 
     key={poem.id} 
     poem={poem} 
+    currentUser={currentUser}
+    favorites={favorites}
+    setFavorites={setFavorites}
     enterPoemEdit={enterPoemEdit}
     handleDeletePoem={handleDeletePoem}/>
   })

@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   get '/items/:category_key/:value', to: 'poems#index'
   post '/signup', to: 'users#create'
-  get '/user_favorites/:id', to: 'poems#user_poems'
+  get '/user_books/:id', to: 'books#user_books'
 
 
 

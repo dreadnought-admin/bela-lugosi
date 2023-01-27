@@ -1,9 +1,11 @@
 import React from 'react'
+import Spotify from 'react-spotify-embed'
+
 
 const Footer = () => {
   return (
     <div>
-      <h1>Hi, I'm the Footer!</h1>
+      <Spotify wide link = "https://open.spotify.com/album/5NhiaFlFGgymG2rDNqAcm1?si=eVD-G_tsTr605PSe7JluKw"/>
     </div>
   )
 }

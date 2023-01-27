@@ -6,7 +6,6 @@ const Search = ({ setSearch }) => {
 
   return (
     <div>
-      <h1>I'm the search component!</h1>
     <label className="searchLabel" htmlFor='search'>Search</label> 
 
     <input

@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Creepster&family=Hina+Mincho&family=Passions+Conflict&family=UnifrakturCook&family=UnifrakturMaguntia&display=swap');
+
+
+/* .navigation {
+  display: inline;
+  width: 100%;
+  padding-bottom: 50px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logoContainer {
+  float: right;
+  margin-right: 10px;
+}
+
+.home_txt {
+  float: right;
+  margin-right: 60px;
+} */
+
+.nav{
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+.nav li{
+  display:inline;
+}
+.nav a{
+  display:inline-block;
+  padding:10px;
+  text-decoration: none;
+}
+
+.gothic-books {
+  float: right;
+}
+
+.source {
+  text-decoration: none;
+}
+
+.sourceContainer {
+  padding-bottom: 25px;
 }

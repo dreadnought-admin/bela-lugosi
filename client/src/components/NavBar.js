@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 const NavBar = ({ updateUser, currentUser }) => {
@@ -17,41 +17,57 @@ const NavBar = ({ updateUser, currentUser }) => {
     }
 
   return (
-    <div>
-        <div>
-            
-                <Link to="/">
-                    Home
-                </Link>
-                <Link to="/poems">
-                    <a href="">
-                        <h1>Poems</h1>
-                    </a>
-                </Link>
-                <Link to="/books">
-                    <h1>Books</h1>
-                </Link>
-                <Link to="/login">
-                    Login
-                </Link>
-                <Link to ="/about">
-                    What is Gothic Literature?
-                </Link>
-
-            {currentUser && (
-                <div className='bar-item'>
-                    <Link to="/profile">
-                        <a>Hello, {currentUser.username}</a>
-                    </Link>
-                    <div>
-                        <Link to="/" onClick={handleLogOut}>Logout</Link>
+    <header>
+            <nav className="navbar">
+                <ul class="nav">
+                <div className="buttonbar">
+                    <div className="logoContainer">
+                        <li><Link to="/">
+                        <img className="siteLogo" height="200px" width="200px" src="../images/circulargigas.png"></img>
+                        <p className="home_txt">Home</p>
+                        </Link>
+                        </li>
                     </div>
-                </div>
-            )}
+                    <li>
+                    <NavLink to="/poems">
+                        <p>Poems</p>
+                    </NavLink>
+                    </li>
 
-        </div>
-      
-    </div>
+                    <li>
+                    <NavLink to="/books">
+                        <p>Books</p>
+                    </NavLink>
+                    </li>
+
+                    <li>
+                    <NavLink to="/login">
+                        <p>Login</p>
+                    </NavLink>
+                    </li>
+                    
+                    <li>
+                    <NavLink to ="/about">
+                        <p>What is Gothic Literature?</p>
+                    </NavLink>
+                    </li>
+
+                {currentUser && (
+                    <div>
+                        <NavLink to="/profile">
+                            <a>The Darkness Embraces You, {currentUser.username}</a>
+                        </NavLink>
+
+                        <div>
+                            <NavLink to="/" onClick={handleLogOut}>Logout</NavLink>
+                        </div>
+                    </div>
+                )}
+                    
+                </div>
+                </ul>
+            </nav>
+    </header>
   )
 }
 
